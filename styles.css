@@ -27,8 +27,8 @@ h1 {
 
 h2 {
   font-family: 'Archivo', sans-serif;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 100;
   color: var(--text-dark);
   margin-block-start: 24px;
@@ -58,9 +58,8 @@ a:hover {
 }
 
 
-
 .main-content {
-  max-width: 840px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -104,4 +103,13 @@ li:hover {
   cursor:pointer;
 }
 
+
+@media screen and (max-width: 815px) {
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+}
 
