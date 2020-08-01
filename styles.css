@@ -61,15 +61,13 @@ a:hover {
 .main-content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 40px;
 }
 
 
 .main-header {
-  margin-top: 64px;
-  margin-bottom: 48px;
-  background-color: var(--bg-dark-2);
   padding: 40px;
+  background-color: var(--bg-dark-2);
 }
 
 
@@ -106,9 +104,27 @@ li:hover {
 
 @media screen and (max-width: 815px) {
 
+  .main-content {
+    padding: 0 24px;
+  }
+
   h1 {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 48px;
+  }
+
+  h2 {
+    margin-block-start: 32px;
+    margin-block-end: 32px;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  li {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
   
 }
