@@ -1,14 +1,15 @@
 :root {
   --bg: #F8F9FA;
-  --bg-dark: #545454;
+  --bg-dark: #303132;
+  --bg-dark-2: #1E1E1E; 
   --text: #303132;
   --text-dark: #F8F9FA;
-  --accent: #79A831;
-  --links: #79A831;
+  --accent: #C1DCFA;
+  --accent-hover: #D0FAC1;
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--bg-dark);
   margin: 0;
   display: block;
 }
@@ -21,14 +22,15 @@ h1 {
   margin: 0;
   margin-block-start: 16px;
   margin-block-end: 16px;
+  background-color: var(--bg-dark-2);
 }
 
 h2 {
   font-family: 'Archivo', sans-serif;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 36px;
   font-weight: 100;
-  color: var(--text);
+  color: var(--text-dark);
   margin-block-start: 24px;
   margin-block-end: 24px;
 
@@ -38,7 +40,7 @@ p {
   font-family: 'Archivo', sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: var(--text);
+  color: var(--text-dark);
   margin: 32px 0;
 }
 
@@ -46,60 +48,22 @@ a {
   font-family: 'Archivo', sans-serif;
   all: unset;
   cursor: pointer;
-  line-height: 1.3em;
+  color: var(--accent);
+  background-color: var(--bg-dark-2);
 }
 
-[class*="link"] {
-  font-family: 'Archivo', sans-serif;
-  box-sizing: border-box;
-  position: relative;
-  transition: color .5s ease;
-  display: inline-flex;
-  padding: 0 .1em;
-  overflow: hidden;
+a:hover {
+  background-color: var(--accent-hover);
+  color: var(--text);
 }
 
-[class*="link"]::before {
-  content: '';
-  width: 100%;
-  bottom: 0px;
-  height: 3px;
-  left: 0;
-  position: absolute;
-  background-color: var(--accent);
-  ;
-  transition: transform .5s ease;
-}
 
-[class*="link"]::after {
-  content: '';
-  position: absolute;
-  height: calc(100% + 10px);
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--accent);;
-  z-index: -1;
-  transform: translateY(100%);
-  transition: transform .5s ease;
-}
-
-[class*="link"]:hover {
-  color: white;
-}
-
-[class*="link"]:hover::before {
-  transform: translateX(-110%);
-}
-
-[class*="link"]:hover::after {
-  transform: translateY(0);
-}
 
 .main-content {
-  max-width: 800px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0 40px;
+  transform: translateZ(0);
 }
 
 
@@ -115,6 +79,7 @@ a {
 
 nav {
   margin: 40px 0;
+  font-size: 16px;
 }
 
 .navigation {
