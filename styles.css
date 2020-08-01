@@ -16,19 +16,19 @@ body {
 
 h1 {
   font-family: 'Vidaloka', serif;
-  font-size: 60px;
+  font-size: 80px;
+  line-height: 86px;
   color: var(--accent);
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   margin-block-start: 16px;
   margin-block-end: 16px;
-  background-color: var(--bg-dark-2);
 }
 
 h2 {
   font-family: 'Archivo', sans-serif;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 32px;
   font-weight: 100;
   color: var(--text-dark);
   margin-block-start: 24px;
@@ -63,13 +63,14 @@ a:hover {
   max-width: 840px;
   margin: 0 auto;
   padding: 0 40px;
-  transform: translateZ(0);
 }
 
 
 .main-header {
   margin-top: 64px;
   margin-bottom: 48px;
+  background-color: var(--bg-dark-2);
+  padding: 40px;
 }
 
 
@@ -78,8 +79,7 @@ a:hover {
 }
 
 nav {
-  margin: 40px 0;
-  font-size: 16px;
+  margin: 40px 0 0 40px;
 }
 
 .navigation {
@@ -96,6 +96,7 @@ ul {
 
 li {
   margin-right: 16px;
+  font-size: 18px;
 }
 
 li:hover {
