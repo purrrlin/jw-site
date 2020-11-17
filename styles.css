@@ -46,7 +46,6 @@ p {
 
 a {
   font-family: 'Archivo', sans-serif;
-  all: unset;
   cursor: pointer;
   color: var(--accent);
   background-color: var(--bg-dark-2);
