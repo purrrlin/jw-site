@@ -1,6 +1,6 @@
 :root {
   --bg: #F8F9FA;
-  --bg-dark: #303132;
+  --bg-dark: #1E1E1E;
   --bg-dark-2: #1E1E1E; 
   --text: #303132;
   --text-dark: #F8F9FA;
@@ -11,37 +11,77 @@
 body {
   background-color: var(--bg-dark);
   margin: 0;
-  display: block;
+  font-size: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+  
+  @media (min-width: 780px) {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+}
+
+nav {
+  grid-row: 1;
+  list-style-type: none;
+  text-align: center;
+}
+
+.main-content {
+  grid-row: 2;
+  padding: 4em;
+  grid-template-columns: 3fr;
+}
+
+.image {
+  grid-row: 2;
+}
+
+img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 h1 {
   font-family: 'Vidaloka', serif;
-  font-size: 80px;
-  line-height: 86px;
+  font-size: 5em;
   color: var(--accent);
   font-weight: 500;
   margin: 0;
-  margin-block-start: 16px;
-  margin-block-end: 16px;
 }
 
 h2 {
+  font-family: 'Vidaloka', serif;
+  font-size: 2em;
+  font-weight: 100;
+  color: var(--accent);
+  margin-top: 0;
+}
+
+h3 {
   font-family: 'Archivo', sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 2em;
   font-weight: 100;
   color: var(--text-dark);
-  margin-block-start: 24px;
-  margin-block-end: 24px;
+}
 
+h4 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.8em;
+  font-weight: 100;
+  color: var(--text-dark);
+  margin: 0;
 }
 
 p {
   font-family: 'Archivo', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1em;
+  line-height: 1.4em;
   color: var(--text-dark);
-  margin: 32px 0;
 }
 
 a {
@@ -57,15 +97,8 @@ a:hover {
 }
 
 
-.main-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-
 .main-header {
-  padding: 40px;
+  padding: 6em;
   background-color: var(--bg-dark-2);
 }
 
@@ -74,15 +107,6 @@ a:hover {
   color: var(--accent);
 }
 
-nav {
-  margin: 40px 0 0 40px;
-}
-
-.navigation {
-  display: inline-flex;
-  list-style-type: none;
-  padding-inline-start: 0px;
-}
 
 ul {
   display: inline-flex;
@@ -91,8 +115,7 @@ ul {
 }
 
 li {
-  margin-right: 16px;
-  font-size: 18px;
+  margin-right: 1em;
 }
 
 li:hover {
@@ -100,31 +123,55 @@ li:hover {
   cursor:pointer;
 }
 
+/*Work*/
 
-@media screen and (max-width: 815px) {
-
-  .main-content {
-    padding: 0 24px;
-  }
-
-  h1 {
-    font-size: 32px;
-    line-height: 48px;
-  }
-
-  h2 {
-    margin-block-start: 32px;
-    margin-block-end: 32px;
-  }
-
-  .navigation {
-    display: block;
-  }
-
-  li {
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-  
+.work {
+  margin-bottom: 2rem;
 }
 
+hr {
+  border: 1px solid #000000;
+  border-radius: 2px;
+}
+
+.work-container {
+  max-width: 60rem;
+  margin: auto;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 4em; 
+}
+
+.title {
+  grid-row: 1;
+  grid-column: 1 / span 3; 
+  margin: 2rem 0;
+}
+
+.brief {
+  grid-row: 3;
+  grid-column: 1 / span 2; 
+}
+
+.brief-right {
+  grid-row: 3;
+  grid-column: 3 / span 2; 
+}
+
+.brief-2 {
+  grid-row: 4;
+  grid-column: 1 / span 2; 
+}
+
+.team-specs {
+  grid-row: 3;
+  grid-column: 3 / span 2; 
+}
+
+feature {
+  grid-row: 2;
+  grid-column: 1 / span 4;
+}
