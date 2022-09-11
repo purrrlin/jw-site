@@ -46,9 +46,23 @@ img {
   border-radius: 6px;
 }
 
+
+@media only screen and (max-width: 800px) {
+
+  h1 {
+    font-size: 2em !important;
+  }
+
+  .main-content {
+    padding: 1em;
+    grid-area: none;
+  }
+  
+}
+
 h1 {
   font-family: 'Vidaloka', serif;
-  font-size: 5em;
+  font-size: 4em;
   color: var(--accent);
   font-weight: 500;
   margin: 0;
